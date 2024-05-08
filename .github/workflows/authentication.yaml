@@ -23,12 +23,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        with:
+          path: src/server
 
       - name: Build
         run: npm run build
-      
-      - name: Archive build artifacts
-        uses: actions/upload-artifact@v2
         with:
-          name: build
           path: src/server
+        
