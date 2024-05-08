@@ -23,6 +23,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        with:
+          name: install
+          path: src/server
 
       - name: Build
         run: npm run build
+         with:
+          name: build
+          path: src/server
